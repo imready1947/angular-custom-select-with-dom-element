@@ -1,0 +1,33 @@
+/* Add application styles & imports to this file! */
+
+html, body {
+  font-size: 12px;
+}
+
+ .q2o-select {
+   border: 1px solid red;
+   height: 100px;
+   max-height: 100px;
+   visibility: hidden;
+   position: absolute;
+   z-index: 500;
+   overflow: auto;
+   background-color: white;
+   padding: .5rem;
+   border-radius: .25rem;
+ }
+
+ .q2o-select .elem {
+  padding: .25rem;
+  min-height: 2rem;
+}
+
+.q2o-select .elem.selected {
+  background-color: red;
+  color: white;
+}
+
+.q2o-select .elem.hover:not(.selected) {
+  background-color: lightblue;
+  color: black;
+}

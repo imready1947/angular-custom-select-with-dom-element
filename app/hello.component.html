@@ -1,0 +1,12 @@
+<div class='container-fluid'>
+	<form>
+		<div class="form-group row mt-3">
+			<label for="text" class="col-3 col-form-label">Select Text</label>
+			<div class="col-6">
+				<input type="text" autocomplete="off" name="textbox" placeholder="Select One" #textbox (click)="showSelect()" class="form-control custom-select" (keyup)="onKeyUp($event)" [ngModel]="text" (ngModelChange)="onModelChange($event)">
+			</div>
+		</div>
+	</form>
+  <p *ngIf="isValidSelect(); else elseBlock">{{selectedValue | json}}</p>
+  <ng-template #elseBlock><p class="text-danger font-weight-bold">Invalid Selection</p></ng-template>
+</div>
